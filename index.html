@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+ul {
+    margin-top: 40px;
+list-style: none;
+display: flex;
+padding: 0;
+}
+
+a {
+padding: 16px;
+background: cornflowerblue;
+color: cornsilk;
+text-decoration: none;
+}
+a:hover {
+background: deeppink;
+
+}
+
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+    
+<form name="formMenu">
+
+<p>Пункты меню: <input type="text"
+    name="eleMenu" value="Главная, 0 компании, Новости" size="50"></p>
+
+
+    <p>Цвет текста: <input type="color"
+        name="fColor" value="#FFFFFF"></p>
+
+
+        <P>Цвет фона: <input type="color"
+            name="bColor" value="#41AEDC"></P>
+<P>Цвет hover: <input type="color"
+    name="bHover" value="#FD9C10"></P>
+
+<p>
+<input type="button" name="but"
+value="Создать меню"></p>
+
+
+
+</form>
+
+
+<style id="myStile"></style>
+<div id="myMenu"></div>
+<div id="big"></div>
+
+<!--<ul>
+<li><a href="#">Главная</a></li>
+<li><a href="#">Главная</a></li>
+<li><a href="#">Главная</a></li>
+
+
+</ul> -->
+
+
+<script>
+
+function menu() {
+
+
+let eleMenu = formMenu.eleMenu.value;
+let fColor = formMenu.fColor.value;
+let bColor = formMenu.bColor.value;
+let hColor = formMenu.hColor.value;
+
+let arrMenu = eleMenu.split(", ");
+
+//console.log(eleMenu, fColor, bColor, hColor);
+
+
+let s = '', s1 = '';
+
+for (i=0; i<arrMenu.length; i++)
+
+s += `<li><a href="#">${arrMenu[i]}</a></li>`;
+s += `<ul>${s}</ul>`;
+//console.log(s);   
+
+s1 = `
+
+a {
+background: ${bColor};
+color: ${fColor};
+
+}
+
+a:hover {
+background: ${hcolor};
+
+}
+
+myMenu.innerHTML = s;
+formMenu.but.value = "Изменить меню";
+myStile.innerHTML
+}
+
+</script>
+
+</body>
+</html>
